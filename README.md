@@ -2,6 +2,9 @@
 
 Welcome to the Michigan Data Science Team tutorials repository.
 
+![alt text](https://github.com/MichiganDataScienceTeam/tutorials/img/signature-informal.png "MDST Logo")
+
+
 Recordings from the fall 2017 tutorial series will be available [here](http://leccap.engin.umich.edu/leccap/site/qrbkcawjkoyut2llnkr) as they become available.
 
 Tentative Fall 2017 tutorial schedule:

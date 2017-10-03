@@ -35,4 +35,4 @@ Tentative Fall 2017 tutorial schedule:
 12/5: Member-Led Tutorial
 ```
 
-[MDST Website](mdst.eecs.umich.edu)
+[MDST Website](http://midas.umich.edu/mdst/)

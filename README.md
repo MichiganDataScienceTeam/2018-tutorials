@@ -26,13 +26,13 @@ Tentative Fall 2017 tutorial schedule:
 
 11/7 Reproducible Data Science: Version Control and Data Science Pipeline Tools
 
-11/14 Member-Led Tutorial (topic TBD)
+11/14 Quicken Loans Competition Tutorial
 
 [Thanksgiving Week 11/21; no tutorial]
 
 11/28: Flux
 
-12/5: Member-Led Tutorial
+12/5: Baltimore Ravens Competition Tutorial
 ```
 
 [MDST Website](http://midas.umich.edu/mdst/)

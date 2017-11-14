@@ -2,6 +2,13 @@
 
 Forked from `https://github.com/MichiganDataScienceTeam/ql-lending-strategies`
 
++ First, sign up for a Kaggle account here (use your @umich.edu account):
+https://www.kaggle.com/account/register
+
++ Check your email and confirm using the confirmation link from Kaggle
+
++ Sign up for access to the data on the Kaggle page.
+
 Usage:
 
 ```

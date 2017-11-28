@@ -249,16 +249,174 @@ Make sure to edit the file to include your own uniqname first.
 
 ## Checking the Queue
 
-TODO
+While your jobs run, you may want to check their status. You can view
+all of your current jobs using:
+
+```
+$ qstat -u $USER
+```
+
+To view all of the current jobs for our CPU allocation:
+
+```
+$ showq -w acct=mdatascienceteam_flux
+```
+
+### Job Statuses
+
+In the output of `showq`, you will see that jobs have several possible
+statuses.
+
+- `active`: the job is currently running or starting.
+- `eligible`: the job is queued and eligible to start.
+- `blocked`: the job is queued and not eligible to start.
+
+Jobs are typically blocked because they require more resources than
+what is available. If your job is blocked for a long period of time,
+check your PBS script for errors.
 
 ## Modules
 
-TODO
+Flux uses a program called `Lmod` to manage software installations and
+versions. Each piece of software is loaded as a module, which may have
+dependencies in other modules. Modules are incredible helpful when
+you, for example, need to run code that works on a specific version of
+Python, or need to compile a library with a specific version of a
+compiler.
+
+To view your currently-loaded modules:
+
+```
+$ module list
+```
+
+To view available modules, or available version of a specific module:
+
+```
+$ module av
+$ module av matlab
+```
+
+To load a module:
+
+```
+$ module load matlab/R2016a
+```
+
+To unload module:
+
+```
+$ module unload matlab
+```
+
+If you frequently use a particular combination of modules, you can
+save it using:
+
+```
+$ module save my_modules
+```
+
+and reload it at any time:
+
+```
+$ module purge
+$ module restore my_modules
+```
+
+The `default` module list can be changed in the same way, and will be
+loaded whenever you log in to Flux.
+
+### PBS and Modules
+
+When a job starts, it will load the default module list. If you need
+an alternate set of modules, you can load them via `module load`
+within your PBS script.
 
 ## Creating Modules
 
-TODO
+If and when you install software on Flux, you should create new
+modules to manage it. To create a private module:
+
+First, create a place to store your modules. We recommend putting all
+your modules in a subdirectory called `$USER`, to ensure that each of
+your modules is named `$USER/mymodule`. This helps distinguish your
+private modules from shared modules.
+
+```
+mkdir $HOME/privatemodules/$USER
+```
+
+Tell Lmod where to find your modules.
+
+```
+module use $HOME/privatemodules
+```
+
+Install some software. Let's say you want to install Python/Anaconda
+locally. You can follow the installation instructions
+[here](https://docs.anaconda.com/anaconda/install/), and make sure to
+set the install location somewhere in your `$HOME` directory, such as
+`$HOME/libs/python-anaconda3`.
+
+Now, we create a modulefile, a short lua script which tells Lmod what
+changes to make to our environment variables in order to load the
+software. Let's say you installed Anaconda 3.6. You should named your
+modulefile `$HOME/privatemodules/$USER/python-anaconda3/3.6.lua`.
+
+Your modulefile should look like this:
+
+```
+local base_dir = "$HOME/libs"
+local version = "3.6"
+local name = "python-anaconda3"
+prepend_path('PATH', pathJoin(base_dir, name, '/bin'))
+```
+
+The key piece here is `prepend_path`. This function adds the location
+of the anaconda python interpreter to the front of the `$PATH`
+variable, meaning that it will be used instead of the default python
+installation on Flux.
+
+To load your new module:
+
+```
+$ module load $USER/python-anaconda3/3.6
+```
+
+Your new module works just like any other. You can unload it or save
+it to your defaults.
+
+For more information on Lmod, please refer to the [Lmod
+documentation](https://lmod.readthedocs.io/en/latest/)
 
 ## Flux Policies and Best Practices
 
-TODO
+Please refer to MDST's [Flux User Policy
+Notebook](https://docs.google.com/a/umich.edu/document/d/199L4IKaz0tpHPDDeZvtSwkagsuqlEpFhBlCydrlG6K0/edit?usp=sharing)
+for computing a complete list of policies. In general,
+
+*Do*:
+- Use MDST Flux allocations for MDST projects
+- Use MDST Flux allocations to learn and practice new data science skills
+- Back up your code and data
+- Save intermediate progress during large jobs
+- Ask if you have questions or concerns
+
+*Do not*:
+- Use MDST Flux allocations for personal research
+- Use MDST Flux allocations for class projects
+- Run significant computation on the login node
+- Request more resources than you need
+- Use `scratch` for permanent storage
+- Request interactive jobs > 4 hrs
+
+
+### Computing Support
+
+If you run into trouble with Flux, you should check out MDST's
+#computing channel on our Slack workspace. Feel free to ask questions,
+or search through the history to see if your question has already been
+addressed.
+
+Otherwise, please contact hpc-support@umich.edu with questions. They
+are very responsive and helpful!

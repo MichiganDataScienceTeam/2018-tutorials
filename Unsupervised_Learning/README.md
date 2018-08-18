@@ -1,4 +1,4 @@
-# Linear Models
+# Unsupervised Learning
 
 Check `Unsupervised_Learning.ipynb` for details.
 

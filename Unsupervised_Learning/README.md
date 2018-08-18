@@ -1,7 +1,10 @@
 # Linear Models
-Check `Linear-Models.ipynb` for details.
+
+Check `Unsupervised_Learning.ipynb` for details.
 
 **References**
-* Datacamp "Supervised Learning with scikit learn"
+
+* Datacamp "Unsupervised Learning in Python"
 * "An Introduction to Statistical Learning: With Applications in R", D. Witten, G. James, R. Tibshirani, and T.Hastie
+
 

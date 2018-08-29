@@ -10,9 +10,9 @@ Recordings from the fall 2018 tutorial series will be available [here](http://le
 Fall 2018 tutorial schedule(tentative):
 
 ```
-9/18: Intro to Data Cleaning in Python(made by Adam Benson)
+9/18: Intro to Software Tools for Data Science
 
-9/25: Exploratory Data Analysis
+9/25: Data Cleaning in Python(made by Adam Benson)
 
 10/2: Intro to Basics in Machine Learning(made by Mukai Wang)
 
@@ -26,7 +26,7 @@ Fall 2018 tutorial schedule(tentative):
 
 11/6: Unsupervised Learning(made by Mukai Wang)
 
-11/14 Reproducible Data Science: Version Control and Data Science Pipeline Tools
+11/14 
 
 [Thanksgiving Week 11/20; no tutorial]
 

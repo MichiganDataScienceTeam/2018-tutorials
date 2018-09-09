@@ -29,7 +29,7 @@ Fall 2018 tutorial schedule(tentative):
 
 [Thanksgiving Week 11/20; no tutorial]
 
-11/27: 
+11/27: Intro to Flux(made by Jonathan Stroud) 
 
 12/4:
 ```

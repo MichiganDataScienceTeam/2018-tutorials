@@ -4,8 +4,7 @@ Welcome to the Michigan Data Science Team tutorials repository.
 
 ![alt text](https://github.com/MichiganDataScienceTeam/tutorials/blob/master/img/signature-informal.png "MDST Logo")
 
-
-Recordings from the fall 2018 tutorial series will be available [here](http://leccap.engin.umich.edu/leccap/site/qrbkcawjkoyut2llnkr) as they become available.
+You can view the tutorials in this github repository. If you expect interactivity with the code, go to our [google drive](https://drive.google.com/drive/folders/11o0wOQxwP1qmByTbu_dLrxWqaoGajvDk?usp=sharing) and open the Ipython notebooks with google colab.
 
 Fall 2018 tutorial schedule(tentative):
 
@@ -35,4 +34,4 @@ Fall 2018 tutorial schedule(tentative):
 12/4:
 ```
 
-[MDST Website](http://midas.umich.edu/mdst/)
+[MDST Website](https://www.mdst.club/)

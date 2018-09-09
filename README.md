@@ -21,7 +21,7 @@ Fall 2018 tutorial schedule(tentative):
 
 10/23: Tree Models(made by Josh Gardner, modified by Mukai Wang)
 
-10/30: Neural Networks(made by Jonathan Stroud)
+10/30: Neural Networks(made by Jared Webb)
 
 11/6: Unsupervised Learning(made by Mukai Wang)
 

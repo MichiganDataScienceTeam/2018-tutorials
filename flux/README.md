@@ -2,7 +2,7 @@
 
 Jonathan Stroud
 
-November 28, 2017
+November 27, 2018
 
 **Disclaimer:** This guide to Flux is meant as a brief tutorial, and
   intentionally leaves out some crucial information. For a
